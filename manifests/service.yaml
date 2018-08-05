@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: learnk8s
+spec:
+  selector:
+    app: learnk8s
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 4000

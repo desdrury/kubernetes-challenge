@@ -1,0 +1,23 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: learnk8s
+spec:
+  selector:
+    matchLabels:
+      app: learnk8s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: learnk8s
+    spec:
+      containers:
+      - name: learnk8s
+        image: learnk8s:v1
+        ports:
+        - containerPort: 4000
+        envFrom:
+        - configMapRef: 
+            name: learnk8s
+

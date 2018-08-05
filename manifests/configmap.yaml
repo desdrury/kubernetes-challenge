@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: learnk8s
+  labels:
+    app: learnk8s
+data:
+  NAME: Des
